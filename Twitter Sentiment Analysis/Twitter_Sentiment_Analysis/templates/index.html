@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Twitter Sentiment Analyzer</h1>
+    <p class="lead">Twitter Sentiment Analyzer is an python based application built using Sequential model and Flask for the frontend.</p>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Try Now</h2>
+        <p>
+            Twitter Sentiment Analyzer application allows user to analyze the sentiments of the tweets. Just Copy Paste the tweet in the chat box and click on GO.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('tryNow') }}">Try Now &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Datasets Used</h2>
+        <p>We have used 4 different dataset. Each focuing on different fields to bring variety to the model.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Sequential Model</h2>
+        <p>Model uses LSTM Sequential model to make predictions.</p>
+    </div>
+</div>
+
+{% endblock %}

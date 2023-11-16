@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    // JavaScript for handling the AJAX request
+    $(document).ready(function () {
+        $('#submitButton').click(function () {
+            var inputText = $('#inputText').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/tryNow',
+                data: { inputText: inputText },
+                success: function (data) {
+                    console.log(data);
+                    $('#resultText').text(data.result);
+                    $('#result').show();
+                    updateInputHistory(data.inputHistory);
+                }
+            });
+        });
+        function updateInputHistory(inputHistory) {
+            var ul = $('#b ul');
+            ul.empty();
+            const data = JSON.parse(inputHistory);
+            var tableBody = $("#table tbody");
+            tableBody.empty()
+            data.queue.forEach(function (item) {
+
+                var row = $('<tr>');
+                var inputCell = $('<td>').text(item.input.toString());
+                var predictionCell = $('<td>').text(item.prediction.toString());
+
+                // Append the cells to the row
+                row.append(inputCell);
+                row.append(predictionCell);
+
+                // Append the row to the table
+                tableBody.append(row);
+            });
+        }
+    });
+</script>
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<form id="inputForm">
+    <input type="text" id="inputText" />
+    <button type="button" id="submitButton">Go</button>
+</form>
+
+<div id="result" style="display: none;">
+    <h2>Result:</h2>
+    <p id="resultText"></p>
+</div>
+{% if result %}
+<div class="result">
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+</div>
+{% endif %}
+<div id="b">
+    <h2>Your last Last 10 Twittes</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Input</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+{% endblock %}
