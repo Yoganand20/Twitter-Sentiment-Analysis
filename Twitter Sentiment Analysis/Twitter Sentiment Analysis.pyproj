@@ -39,19 +39,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Twitter_Sentiment_Analysis\" />
+    <Folder Include="Twitter_Sentiment_Analysis\LSTM_model\" />
+    <Folder Include="Twitter_Sentiment_Analysis\LSTM_model\assets\" />
+    <Folder Include="Twitter_Sentiment_Analysis\LSTM_model\variables\" />
     <Folder Include="Twitter_Sentiment_Analysis\static\" />
     <Folder Include="Twitter_Sentiment_Analysis\static\content\" />
     <Folder Include="Twitter_Sentiment_Analysis\static\fonts\" />
     <Folder Include="Twitter_Sentiment_Analysis\static\scripts\" />
     <Folder Include="Twitter_Sentiment_Analysis\templates\" />
-    <Folder Include="Twitter_Sentiment_Analysis\TSA_model_new\" />
-    <Folder Include="Twitter_Sentiment_Analysis\TSA_model_new\assets\" />
-    <Folder Include="Twitter_Sentiment_Analysis\TSA_model_new\variables\" />
     <Folder Include="Twitter_Sentiment_Analysis\Twitter-Sentiment-Dataset\" />
     <Folder Include="Twitter_Sentiment_Analysis\Twitter-Sentiment-Dataset\.ipynb_checkpoints\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\fingerprint.pb" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\keras_metadata.pb" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\saved_model.pb" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\tokenizer.pickle" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\variables\variables.data-00000-of-00001" />
+    <Content Include="Twitter_Sentiment_Analysis\LSTM_model\variables\variables.index" />
     <Content Include="Twitter_Sentiment_Analysis\static\content\bootstrap.css" />
     <Content Include="Twitter_Sentiment_Analysis\static\content\bootstrap.min.css" />
     <Content Include="Twitter_Sentiment_Analysis\static\content\site.css" />
@@ -80,12 +86,6 @@
     <Content Include="Twitter_Sentiment_Analysis\templates\layout.html" />
     <Content Include="Twitter_Sentiment_Analysis\templates\dataSet.html" />
     <Content Include="Twitter_Sentiment_Analysis\templates\visualisations.html" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\tokenizer.pickle" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\fingerprint.pb" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\keras_metadata.pb" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\saved_model.pb" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\variables\variables.data-00000-of-00001" />
-    <Content Include="Twitter_Sentiment_Analysis\TSA_model_new\variables\variables.index" />
     <Content Include="Twitter_Sentiment_Analysis\Twitter-Sentiment-Dataset\airline-Tweets.csv" />
     <Content Include="Twitter_Sentiment_Analysis\Twitter-Sentiment-Dataset\apple-twitter-sentiment-texts.csv" />
     <Content Include="Twitter_Sentiment_Analysis\Twitter-Sentiment-Dataset\c19-finalSentimentdata2.csv" />

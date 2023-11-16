@@ -12,7 +12,7 @@ import pickle
 from Twitter_Sentiment_Analysis.ll_queue import Queue
 import json
 
-model_path = r'C:/Users/yoganand/source/repos/Twitter Sentiment Analysis/Twitter Sentiment Analysis/Twitter_Sentiment_Analysis/TSA_model_new'
+model_path = r'C:/Users/yoganand/source/repos/Twitter Sentiment Analysis/Twitter Sentiment Analysis/Twitter_Sentiment_Analysis/LSTM_model'
 loaded_model = tf.keras.models.load_model(model_path)
 
 inputHistory=Queue()
